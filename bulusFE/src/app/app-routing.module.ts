@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AnonGuardService } from './services/anonGuard/anon-guard.service';
+import { AuthGuardService } from './services/authGuard/auth-guard.service';
 import { UserGuardService } from './services/userGuard/user-guard.service';
+import {MenuComponent} from './layout/menu/menu.component';
 
 const routes: Routes = [
   {
@@ -32,8 +34,27 @@ const routes: Routes = [
   // yg ni else ... selain atas tu :D
   {
     path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
+    component: MenuComponent,
+    canActivate: [AuthGuardService],
+    children: [
+      {
+        path: "home",
+        canActivate: [UserGuardService],
+        loadChildren: () =>
+          import("./pages/home/home.module").then((m) => m.HomeModule),
+      },
+      {
+        path: "dashboard",
+        canActivate: [UserGuardService],
+        loadChildren: () =>
+          import("./pages/dashboard/dashboard.module").then((m) => m.DashboardModule),
+      },
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      }
+    ]
   },
   { path: 'haha', redirectTo: 'login' },
   { path: '**', redirectTo: 'login' }

@@ -1,0 +1,33 @@
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="ico.jpg" type="image/x-icon" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    NGINX - Book System! 
+    <br>
+  <a href="login" >Login</a>
+  </div>
+  
+
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">HOME WORKS!</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center" *ngIf="infoFetched === false">We need a Bulus!</p>
+    <p class="w3-large w3-center" *ngIf="infoFetched === true">{{tajukbuku}}</p>
+
+    <input class="form-control" placeholder="id bulus" type="text" (input)="checkBulus()"  [(ngModel)]="idbuku">
+    <button type="button" class="btn btn-primary" (click)="sumbitRekod()">
+      Search!
+    </button>
+    <button type="button" (click)="anakabu()">Bulus Speech</button>
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    Powered by <a href="login" >Bulus</a>
+  </div>
+</div>
+<!--<img src="assets/images/lenovo.jpg" alt="small-logo.png"> -->
