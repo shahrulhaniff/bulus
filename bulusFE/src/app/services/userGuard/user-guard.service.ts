@@ -12,18 +12,13 @@ export class UserGuardService {
     private router: Router
   ) { }
 
-  private haha = "user";
 
   canActivate() : boolean{
-    if( (this.haha) !== 'user')
-    {
-    console.log("haha!"); this.router.navigate(['login']);
-    return false;
-    } 
-    /*if (sessionStorage.getItem('role') !== 'user') {
+    
+    if (sessionStorage.getItem('role') !== 'user') {
       this.router.navigate(['login']);
       return false;
-    }*/
+    }
     return true; 
   }
 }

@@ -19,17 +19,17 @@ const routes: Routes = [
       import("./pages/login/login.module").then((m) => m.LoginModule),
   },
   {
-    path: "dashboard",
-    canActivate: [UserGuardService], 
-    loadChildren: () =>
-      import("./pages/dashboard/dashboard.module").then((m) => m.DashboardModule),
-  },
-  {
     path: "landingpage",
     canActivate: [UserGuardService], 
     loadChildren: () =>
       import("./pages/landingpage/landingpage.module").then((m) => m.LandingpageModule),
   },
+  // {
+  //   path: "myprofileX",
+  //   canActivate: [UserGuardService], 
+  //   loadChildren: () =>
+  //     import("./pages/myprofile/myprofile.module").then((m) => m.MyprofileModule),
+  // },
 
   // yg ni else ... selain atas tu :D
   {
@@ -50,14 +50,21 @@ const routes: Routes = [
           import("./pages/dashboard/dashboard.module").then((m) => m.DashboardModule),
       },
       {
+        path: "myprofile",
+        canActivate: [UserGuardService],
+        loadChildren: () =>
+          import("./pages/myprofile/myprofile.module").then((m) => m.MyprofileModule),
+      },
+      {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
-      }
+      },
+      { path: '**', redirectTo: 'home' }
     ]
   },
   { path: 'haha', redirectTo: 'login' },
-  { path: '**', redirectTo: 'login' }
+  { path: '**', redirectTo: 'landingpage' }
 ];
 
 @NgModule({

@@ -34,6 +34,27 @@ FE 🟢
 🔑ng generate module login-routing 
 # pastu cut paste dekat folder pages login
 # module ni ada 2, (total 3 cmd kena run utk create page) biasa dengan routing # delete folder yg dah kosong
+pastu cek takut dia letak Component dalam declaration ngmodule dekat app.module.ts, kalau ada, buang. pelik bila buat MyprofileComponent dia ada, tapi yg lain sebelum ni xda
+pastu masukkan path '' dekat routing.module [letak dekat atas ngmodule
+====================================
+const routes: Routes = [
+  {
+    path: '',
+    component: LandingpageComponent,
+    data: {
+      title: 'User Login'
+    }
+  }
+];
+====================================
+lepastu.. haha.. ganti ngmodule sekali.. ni koding dia.. ganti trozz
+====================================
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+===================================
+
 FE 🟢
 ⭐buat folder service🛡️
 ng generate service pokgad / ng generate service authentication
@@ -41,7 +62,7 @@ ng generate service pokgad / ng generate service authentication
 # ataupun klik folder > Open in integrated terminal > run cmd
 
 FE 🟢
-#PROGRESS# 10/8/2022 + 24/8/2022(BulusFE)
+#PROGRESS# 10/8/2022 + 24/8/2022(BulusFE) 🔄continue progress🔜❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥
 -ROUTING TUTORIAL WITH OYEN, COOLCAT, W3CSS & LENOVO
 -buat sampai jadi login-works html tu, ada bbrp step copy koding. tak susah pun
 🛠️🛠️🛠️
@@ -100,7 +121,7 @@ npm install bcrypt
 BE 🔴
 npm install jsonwebtoken
 npm install mysql
-copy code app.js dgn folder API
+copy code app.js dgn folder API🧙‍♂️
 copy folder config/database
 copy folder utils
 
@@ -132,3 +153,45 @@ We need a bulus!
 #PROGRESS# 21/8/2022
 UPDATE SUCCESS🔥
 ngmodel is value!! display je value from ts tu
+
+
+FE 🟢
+#PROGRESS# 27/8/2000 🔄continue progress🔜 10/8/2022 + 24/8/2022(BulusFE) ❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥
+-masukkan jugak MenuComponent ke dalam @NgModule dekat app.module.ts utk access component <selector> eg<app-title>,<app-root>
+
+
+FE 🟢 #PROGRESS# 28/8/2000
+bulus login revolution✅
+cara-cara apply token✅
+refresh token in process learning❌
+refreshToken(user) { ❌kiv, mcm xfunction dlm tgglob
+letak session token dalam constructor [AuthenticationService] supaya ada session bila lepas login
+========================================
+if (sessionStorage.getItem('token')) {
+      this.authState.next(true);
+    }
+========================================
+socket❌kiv - socket mungkin guna utk detect ada guna login acc kat device lain kot
+modalIdle❌kiv
+logout()✅
+menu✅
+css✅
+@ViewChild('modalIdle', {static: false}) modalIdle; ❌❌❌
+<app-breadcrumbs></app-breadcrumbs> ❌
+register❌
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

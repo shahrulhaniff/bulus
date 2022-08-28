@@ -1,0 +1,8 @@
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('https://cutewallpaper.org/21/lenovo-background-wallpaper/IBMLenovo-ThinkPad-wallpapers-and-other-customization-files-.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 //import {BasicLoginRoutingModule} from './basic-login-routing.module';
 //import { SharedModule } from '../../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeRoutingModule } from './home-routing.module';
 //import { ToastyModule } from 'ng2-toasty';
 //import { NgxSpinnerModule } from 'ngx-spinner';
 
@@ -16,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     //ToastyModule.forRoot(),
     //NgxSpinnerModule
+    HomeRoutingModule
   ],
   //declarations: [HomeComponent]
 })

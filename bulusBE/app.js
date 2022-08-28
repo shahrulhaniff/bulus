@@ -5,7 +5,8 @@ const cors = require("cors");
 const helmet = require("helmet");
 const app = express();
 const rateLimit = require("express-rate-limit");
-const bookRouter = require("./api/meow/meow.router");
+const meowRouter = require("./api/meow/meow.router");
+const authRouter = require("./api/authentication/login.router");
 app.use(express.json());
 
 
@@ -23,22 +24,26 @@ const corsOptions = {
 app.use(cors()); 
 // ***********************************************
 // Express Rate Limit to prevent Brute Force Attack & DDoS
-
 const limiter = rateLimit({
     windowMs: 7 * 60 * 700, // 7 minutes
     max: 300, // Limit each IP to 100 requests per windowMs
     message: "Too many requests from this IP. Please try again"
 });
+const loginApiLimiter = rateLimit({
+    windowMs: 5 * 60 * 1000, // 5 minutes
+    max: 2
+});
 // ***********************************************
-
 
 // Apply to all API
 app.use(limiter);
 app.use(helmet()); 
 // APIs
-//app.use("/api/auth", authRouter);
-app.use("/api/bulus", bookRouter);
-app.use('/api', bookRouter); //to use the routes
+app.use("/api/auth", authRouter);
+app.use("/api/bulus", meowRouter);
+app.use('/api', meowRouter); //to use the routes
+// APIs with specific limiter
+app.use("/api/auth/login", loginApiLimiter);
 
 const server = app.listen(process.env.APP_PORT, ()=> {
     console.log("Server bulus is up and running.");

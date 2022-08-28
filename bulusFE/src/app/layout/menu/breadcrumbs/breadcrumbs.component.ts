@@ -8,7 +8,7 @@ import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
 })
 export class BreadcrumbsComponent implements OnInit {
   tempState = [];
-  //breadcrumbs: Array<Object>;
+  breadcrumbs: Array<any> = ['Yiyi','Bulat','Molly'];
 
   constructor(private router: Router, private route: ActivatedRoute) { /*
     this.router.events

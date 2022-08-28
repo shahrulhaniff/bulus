@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
-import { LandingpageComponent } from './landingpage.component';
+import { RouterModule,Routes } from '@angular/router';
+import { MyprofileComponent } from './myprofile.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LandingpageComponent,
+    component: MyprofileComponent,
     data: {
-      title: 'Land Ho!'
+      title: 'User Profile'
     }
   }
 ];
@@ -17,4 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class LandingpageRoutingModule { }
+export class MyprofileRoutingModule { }
