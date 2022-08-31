@@ -34,15 +34,19 @@ FE 🟢
 🔑ng generate module login-routing 
 # pastu cut paste dekat folder pages login
 # module ni ada 2, (total 3 cmd kena run utk create page) biasa dengan routing # delete folder yg dah kosong
-pastu cek takut dia letak Component dalam declaration ngmodule dekat app.module.ts, kalau ada, buang. pelik bila buat MyprofileComponent dia ada, tapi yg lain sebelum ni xda
+pastu cek takut dia letak Component dalam declaration ngmodule dekat app.module.ts, kalau ada, buang. pelik bila buat MyprofileComponent dia ada, tapi yg lain sebelum ni xda, 
+❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥[UPDATE!! - ADA SEBAB NAK GUNA KAT TS BILA NAK APPLY NGIF NANTI]
+❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥[UPDATE LAGI!! - BUANG BALIK SEBAB BILA DECLARE DEKAT DIA PUNYA MODULE SENDIRI TU KENA DELETE BALIK DEKAT APP.MODULE- SEBAB formbuilder dengan reactiveform tu kena declare dekat module sendiri
 pastu masukkan path '' dekat routing.module [letak dekat atas ngmodule
 ====================================
+import { RouterModule, Routes } from '@angular/router';
+
 const routes: Routes = [
   {
     path: '',
-    component: LandingpageComponent,
+    component: AaaaaComponent,
     data: {
-      title: 'User Login'
+      title: 'xxx Page'
     }
   }
 ];
@@ -54,10 +58,27 @@ lepastu.. haha.. ganti ngmodule sekali.. ni koding dia.. ganti trozz
   exports: [RouterModule]
 })
 ===================================
+copy bawah terus --dekat routing.module
+===================================
+import { RouterModule, Routes } from '@angular/router';
 
+const routes: Routes = [
+  {
+    path: '',
+    component: AaaaaComponent,
+    data: {
+      title: 'xxx Page'
+    }
+  }
+];
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+===================================
 FE 🟢
 ⭐buat folder service🛡️
-ng generate service pokgad / ng generate service authentication
+ng generate service pokgad / ng generate service authentication /ng generate service anon-guard
 # pastu cut paste susun dalam folder service, yg spec tu buang
 # ataupun klik folder > Open in integrated terminal > run cmd
 
@@ -183,12 +204,19 @@ register❌
 
 
 
-
-
-
-
-
-
+FE 🟢 BE 🔴 EMAIL & SMS
+#PROGRESS# 28/8/2000 - email & sms
+step 1 - buat satu sistem simple [ngmailFE+ngmailBE]
+copy code sendEmail
+BE 🔴
+Cannot find module 'follow-redirects'
+npm i follow-redirects
+BE 🔴
+Cannot find module 'form-data-body'
+npm i form-data-body
+BE 🔴
+Cannot find module 'moment'
+npm i moment
 
 
 
