@@ -3,15 +3,15 @@ https://youtu.be/C_0yEMHDm5w -cara start nginx 4 beginners
 
 https://www.geeksforgeeks.org/how-to-bundle-an-angular-app-for-production/ -ng build vs ng serve 
 🛡️🛠️🔑⭐
-npx pm2 start app.js
-npm pm2 start prod app.js
+⬛npx pm2 start app.js
+⬛npm pm2 start prod app.js
 
 🛠️START🛠️
 
 FE 🟢
-ng new hello-world
-cd hello-world
-ng serve
+⬛ng new hello-world
+⬛cd hello-world
+⬛ng serve
 localhost:4200
 
 FE 🟢
@@ -27,11 +27,11 @@ FE 🟢
 #PROGRESS# 1/8 - 9/8 - 10/8/2022 belajar cara routing angular
 buat folder pages dekat C:\Users\PREDATOR\Desktop\booksys\hello-world\src\app\pages
 
-cd C:\Users\PREDATOR\Desktop\booksys\hello-world\src\app\pages (nak senang run dekat cmd)
+⬛cd C:\Users\PREDATOR\Desktop\booksys\hello-world\src\app\pages (nak senang run dekat cmd)
 FE 🟢
-🔑ng generate component login
-🔑ng generate module login # nanti import LoginRoutingModule kat module.ts
-🔑ng generate module login-routing 
+🔑⬛ng generate component login
+🔑⬛ng generate module login # nanti import LoginRoutingModule kat module.ts
+🔑⬛ng generate module login-routing 
 # pastu cut paste dekat folder pages login
 # module ni ada 2, (total 3 cmd kena run utk create page) biasa dengan routing # delete folder yg dah kosong
 pastu cek takut dia letak Component dalam declaration ngmodule dekat app.module.ts, kalau ada, buang. pelik bila buat MyprofileComponent dia ada, tapi yg lain sebelum ni xda, 
@@ -98,7 +98,7 @@ STEP2🛠️dashboard-routing.module.ts
 FE 🟢
 #PROGRESS# 11/8/2022
 //cara nginx which is run FE in localhost instead of 4200 dev
-ng build
+⬛ng build
 kalau 403, cek dist pastikan move file index dan seluruh rakyat jelatanya kat depan folder sepertimana dalam config nginx
 //cara guna node utk api gateway BE @ how to res api -10% 
 https://www.youtube.com/watch?v=-MTSQjw5DrM&ab_channel=Fireship
@@ -108,40 +108,40 @@ open cmd
 ************🔥🔥🔥JANGAN RUN DEKAT CMD FE🔥🔥🔥************************
 CREATE FOLDER BE 🔴
 cd C:\Users\PREDATOR\Desktop\booksysBE
-npm init -y
-npm install express
+⬛npm init -y
+⬛npm install express
 create index.js file. mungkin app.js sama jugak so nanti npm start index.js or npm start app.js
 copy code index.js utk testing
-node . <- ni node titik ni start server node pastu boleh try test dekat postman atau browser ikut port contoh localhost:8080 
+⬛node . <- ni node titik ni start server node pastu boleh try test dekat postman atau browser ikut port contoh localhost:8080 
 Cannot GET /
-npx pm2 start index.js @ node . @ node app.js
+⬛npx pm2 start index.js @ ⬛node . @ ⬛node app.js
 
 BE 🔴
-npm install dotenv --save
+⬛npm install dotenv --save
 copy code .env
 # untuk require("dotenv").config(); dan configure database beserta port rakyatnya
-node app.js
+⬛node app.js
 # server is up and running
-npm install express-rate-limit
+⬛npm install express-rate-limit
 #pastu copy code // Express Rate Limit to prevent Brute Force Attack & DDoS
-node app.js
+⬛node app.js
 
 BE 🔴
-npm install socket.io
+⬛npm install socket.io
 # apa tu? Socket.IO enables real-time bidirectional event-based communication.
 #copy code # const cors = require("cors");
 BE 🔴
-npm install helmet --save
+⬛npm install helmet --save
 # apa tu? Helmet helps you secure your Express apps by setting various HTTP headers.
 BE 🔴
-npm install simple-encryptor --save
+⬛npm install simple-encryptor --save
 BE 🔴
-npm install bcrypt
+⬛npm install bcrypt
 # bcrypt is A library to help you hash passwords.
 #create folder util>encryptor
 BE 🔴
-npm install jsonwebtoken
-npm install mysql
+⬛npm install jsonwebtoken
+⬛npm install mysql
 copy code app.js dgn folder API🧙‍♂️
 copy folder config/database
 copy folder utils
@@ -156,7 +156,7 @@ copy folder utils
 
 FE 🟢
 #PROGRESS 14/8/2022#
-npm install sweetalert2
+⬛npm install sweetalert2
 #ADA ERROR, just copy file node-module yang min punya settle. ada masalah dekat import lama punya kot
 import HttpClientModule dekt app.module to be access anywhere in app code folder file
 ada masalah header, payload, interceptor. header tu dia bagi 500, respon semua ada cara-cara menangkap burung tu. lepastu, payload yg asal memang type any tapi mcm kena define jugak kat situ, last skali interceptor ni try copy paste dulu sebab google interceptor macam ada kaitan dengan error 500 ni
@@ -181,7 +181,7 @@ FE 🟢
 -masukkan jugak MenuComponent ke dalam @NgModule dekat app.module.ts utk access component <selector> eg<app-title>,<app-root>
 
 
-FE 🟢 #PROGRESS# 28/8/2000
+FE 🟢 #PROGRESS# 28/8/2022
 bulus login revolution✅
 cara-cara apply token✅
 refresh token in process learning❌
@@ -205,22 +205,24 @@ register❌
 
 
 FE 🟢 BE 🔴 EMAIL & SMS
-#PROGRESS# 28/8/2000 - email & sms
+#PROGRESS# 28/8/2022 - email & sms
 step 1 - buat satu sistem simple [ngmailFE+ngmailBE]
 copy code sendEmail
 BE 🔴
 Cannot find module 'follow-redirects'
-npm i follow-redirects
+⬛npm i follow-redirects
 BE 🔴
 Cannot find module 'form-data-body'
-npm i form-data-body
+⬛npm i form-data-body
 BE 🔴
 Cannot find module 'moment'
-npm i moment
+⬛npm i moment
 
 
 
-
+PROGRESS TAK SEMANGAT LEPAS MUZAKKIR KATA NAK BAYAR 500 JE DENGAN SAKIT KEPALA NAK MATI BUAT KERJA
+DOWN TERUS BEBERAPA HARI 1/9-6/9 (SEMINGGU AMIK MASA NAK SEMANGAT BALIK)
+-SEMOGA DAPAT KERJA DI SELANGOR MCM KAWAN2 LAIN
 ========================
 I like to do things in simple way
 ========================
@@ -235,5 +237,60 @@ Secure from:
 
 Simple but meet your requirements, good performance and more importantly, secured.🛡️
 Also, treat everyone's with respect🙂
+
+FE 🟢
+#PROGRESS# 6/9/2022 - setup bootstrap dalam angular
+⬛npm install bootstrap
+
+
+
+🔴 Red Circle
+🟠 Orange Circle
+🟡 Yellow Circle
+🟢 Green Circle
+🔵 Blue Circle
+🟣 Purple Circle
+🟤 Brown Circle
+⚫ Black Circle
+⚪ White Circle
+
+🟥 Red Square
+🟧 Orange Square
+🟨 Yellow Square
+🟩 Green Square
+🟦 Blue Square
+🟪 Purple Square
+🟫 Brown Square
+⬛ Black Square
+⬜ White Square
+
+❤️ Red Heart
+🧡 Orange Heart
+💛 Yellow Heart
+💚 Green Heart
+💙 Blue Heart
+💜 Purple Heart
+🤎 Brown Heart
+🖤 Black Heart
+🤍 White Heart
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
