@@ -238,9 +238,31 @@ Secure from:
 Simple but meet your requirements, good performance and more importantly, secured.🛡️
 Also, treat everyone's with respect🙂
 
+
+=================================================================================================
 FE 🟢
-#PROGRESS# 6/9/2022 - setup bootstrap dalam angular
+#PROGRESS# 6/9/2022 - 7/9/2022 setup bootstrap dalam angular
 ⬛npm install bootstrap
+pegi kat angular.json
+
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css", ⬅️tambah kod ni
+              "src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" ⬅️tambah kod ni
+            ]
+
+✅DONE add angular, boleh apply class bootstrap 5 dalam html pages
+=================================================================================================
+		❌ni test tak jadi❌
+              "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css",
+              "https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css",
+              "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js",
+              "src/assets/bs5/b.js",
+              "src/assets/bs5/custom.css",
+=================================================================================================
+
 
 
 
@@ -275,9 +297,10 @@ FE 🟢
 🤍 White Heart
 
 
-
-
-
+FE 🟢
+#PROGRESS# 7/9-8/9/2022 - buat responsive sidenav ikut video dan ejas structure sediri (best practice)
+masuk folder layout
+⬛ ng g c body --skip-tests true
 
 
 
