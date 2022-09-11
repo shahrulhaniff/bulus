@@ -8,6 +8,14 @@ https://www.geeksforgeeks.org/how-to-bundle-an-angular-app-for-production/ -ng b
 
 🛠️START🛠️
 
+==========================================================================================================================
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+▰▰▰							⭐⭐⭐	Hello World!	⭐⭐⭐
+
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+==========================================================================================================================
+
 FE 🟢
 ⬛ng new hello-world
 ⬛cd hello-world
@@ -28,8 +36,8 @@ FE 🟢
 buat folder pages dekat C:\Users\PREDATOR\Desktop\booksys\hello-world\src\app\pages
 
 ⬛cd C:\Users\PREDATOR\Desktop\booksys\hello-world\src\app\pages (nak senang run dekat cmd)
-FE 🟢
-🔑⬛ng generate component login
+FE 🟢 
+🔑⬛ng generate component login (ada spec) || 🟦ng g c body --skip-tests true (xde spec)
 🔑⬛ng generate module login # nanti import LoginRoutingModule kat module.ts
 🔑⬛ng generate module login-routing 
 # pastu cut paste dekat folder pages login
@@ -76,13 +84,40 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 ===================================
+
 FE 🟢
 ⭐buat folder service🛡️
 ng generate service pokgad / ng generate service authentication /ng generate service anon-guard
 # pastu cut paste susun dalam folder service, yg spec tu buang
 # ataupun klik folder > Open in integrated terminal > run cmd
+=================================================================
+//copy code ni dalam service
+constructor(
+    private router: Router
+    ) { }
 
-FE 🟢
+  canActivate() : boolean{
+    if (sessionStorage.getItem('accountid')) {
+      //this.router.navigate(['']);
+      //return false;
+      console.log("anon-guard.services.ts > false");return false;
+    }
+    console.log("anon-guard.services.ts > true");
+    return true;
+  }
+=================================================================
+//copy code ni dalam routes app.routing.module
+  {
+    path: "home",
+    canActivate: [AuthenticationService], 
+    loadChildren: () =>
+      import("./pages/home/home.module").then((m) => m.HomeModule),
+  }
+=================================================================
+tambah HomeRoutingModule dekat home.module
+=================================================================
+
+FE 🟢DIULANGI SECARA NOTA
 #PROGRESS# 10/8/2022 + 24/8/2022(BulusFE) 🔄continue progress🔜❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥
 -ROUTING TUTORIAL WITH OYEN, COOLCAT, W3CSS & LENOVO
 -buat sampai jadi login-works html tu, ada bbrp step copy koding. tak susah pun
@@ -93,7 +128,8 @@ STEP1🛠️app-routing.module.ts
 STEP2🛠️dashboard-routing.module.ts
 >const routes: Routes ...path ...
 >@NgModule({
-
+STEP3🛠️tambah HomeRoutingModule dekat home.module
+❤️kalau dah buat semua 3 step atas tapi tak keluar home works! dashboard works tu, dia sebenanye ada kat paling bawah, buang je kod html documentation tu dekat app.component.html❤️
 
 FE 🟢
 #PROGRESS# 11/8/2022
@@ -105,6 +141,13 @@ https://www.youtube.com/watch?v=-MTSQjw5DrM&ab_channel=Fireship
 open cmd
 
 
+==========================================================================================================================
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+▰▰▰							⭐⭐⭐	Back-End	⭐⭐⭐
+
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+==========================================================================================================================
 ************🔥🔥🔥JANGAN RUN DEKAT CMD FE🔥🔥🔥************************
 CREATE FOLDER BE 🔴
 cd C:\Users\PREDATOR\Desktop\booksysBE
@@ -176,6 +219,13 @@ UPDATE SUCCESS🔥
 ngmodel is value!! display je value from ts tu
 
 
+==========================================================================================================================
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+▰▰▰							⭐⭐⭐	AUTH-LOGIN-LOGOUT	⭐⭐⭐
+
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+==========================================================================================================================
 FE 🟢
 #PROGRESS# 27/8/2000 🔄continue progress🔜 10/8/2022 + 24/8/2022(BulusFE) ❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥
 -masukkan jugak MenuComponent ke dalam @NgModule dekat app.module.ts utk access component <selector> eg<app-title>,<app-root>
@@ -204,6 +254,13 @@ register❌
 
 
 
+==========================================================================================================================
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+▰▰▰							⭐⭐⭐	EMAIL & SMS	⭐⭐⭐
+
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+==========================================================================================================================
 FE 🟢 BE 🔴 EMAIL & SMS
 #PROGRESS# 28/8/2022 - email & sms
 step 1 - buat satu sistem simple [ngmailFE+ngmailBE]
@@ -239,6 +296,15 @@ Simple but meet your requirements, good performance and more importantly, secure
 Also, treat everyone's with respect🙂
 
 
+
+
+==========================================================================================================================
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+▰▰▰						⭐⭐⭐	Bootstrap in Angular	⭐⭐⭐
+
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+==========================================================================================================================
 =================================================================================================
 FE 🟢
 #PROGRESS# 6/9/2022 - 7/9/2022 setup bootstrap dalam angular
@@ -297,15 +363,112 @@ pegi kat angular.json
 🤍 White Heart
 
 
+==========================================================================================================================
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+▰▰▰						⭐⭐⭐	RESPONSIVE SIDENAV	⭐⭐⭐
+
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+==========================================================================================================================
 FE 🟢
 #PROGRESS# 7/9-8/9/2022 - buat responsive sidenav ikut video dan ejas structure sediri (best practice)
 masuk folder layout
 ⬛ ng g c body --skip-tests true
+lepastu follow video
+⬛ npm i angular-animations
 
 
 
+==========================================================================================================================
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
+▰▰▰							⭐⭐⭐	TRANSLATE	⭐⭐⭐
 
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+==========================================================================================================================
+FE 🟢
+#PROGRESS# 10/9/2022 - buat translate
+🔥🔥🔥RESTART!!!🔥🔥🔥 kiv!!!!🔥🔥🔥RESTART!!!🔥🔥🔥 kiv!!!!🔥🔥🔥RESTART!!!🔥🔥🔥 kiv!!!!
+https://www.c-sharpcorner.com/article/create-angular-applications-using-ngx-translate/
+❌https://www.c-sharpcorner.com/article/angular-localization-using-ngx-translate/
+⬛ npm i @ngx-translate/core
+🛠️pastu pegi app.module.ts, imports TranslateModule.forRoot()
+=====================================================================
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+imports: [ ..., TranslateModule.forRoot() ... ]
+=====================================================================
+
+⬛ npm i @ngx-translate/http-loader
+
+🛠️The TranslateHttpLoader uses HttpClient to load translations, it means that you have to import the HttpClientModule from @angular/common/http before the TranslateModule.
+
+🛠️ imports: [ ...,   HttpClientModule, ... ]
+
+tambah ni kat atas (bawah segala import tu) 
+=====================================================================
+export function HttpLoaderFactory(httpClient: HttpClient) {  
+    return new TranslateHttpLoader(httpClient);  
+}
+=====================================================================
+🛠️ lepastu, ejas ni :-
+=====================================================================
+TranslateModule.forRoot({  
+            loader: {  
+                provide: TranslateLoader,  
+                useFactory: HttpLoaderFactory,  
+                deps: [HttpClient]  
+            }  
+        })
+=====================================================================
+🛠️ create folder i18n
+🛠️ create 2 json utk bahasa, en.json & my.json
+🛠️ copy code base bawah ni dalam en.json
+===================
+{  
+    "Dashboard": {  
+        "Title": "welcome Angular 9",  
+        "Option": "Change language"  
+    }  
+} 
+===================
+🛠️Now, we can do some code in app.component.ts
+======================================================
+import { TranslateService } from '@ngx-translate/core';  
+constructor(public translate: TranslateService) {  
+    translate.addLangs(['en', 'my']);  
+    translate.setDefaultLang('en');  
+    const browserLang = translate.getBrowserLang();  
+    translate.use(browserLang.match(/en|my/) ? browserLang : 'en');  
+} 
+======================================================
+browserLang tu error, tapi kalau comment buang, run ok je tukar bahasa, maybe angular latest dah tak pakai browserLang dah kot. komen je
+======================================================
+<!-- copy code ni paste dalam app.component.html -->
+<div>  
+    <h3>{{ 'Dashboard.Title' | translate }}</h3>  
+    <div>  
+  
+{{ 'Dashboard.Option' | translate }}  
+        <select #langOption (change)="translate.use(langOption.value)">  
+            <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>  
+        </select>  
+    </div>  
+</div>  
+======================================================
+❌LINK KE DUA ATAS TU TAK JADI❌ - DEKAT DOCUMENTATION KATANYA ANGULAR 13+ DAH TAK PAKAI
+❌app.module.ts
+❌npm i ngx-cookie-service
+❌npm i browser-lang
+
+BEST PRACTICE SO FAR
+-kalau nak guna kat pages, just declare "TranslateService" dekat pages punya "constructor" macam koding kat bawah ni contoh
+======================================
+//home.component.ts
+constructor(
+    public translate: TranslateService
+  ) { }
+======================================
+-tapi rasanya best practice place dekat tempat yg semua pakai macam menu services ataupun boleh dekat depan sekali(index) sebab guna juga dekat landingpage sebelum login. mungkin ada dua tempat kena letak sebab menu services guna addonguard lain punya routing page call nanti
 
 
 
