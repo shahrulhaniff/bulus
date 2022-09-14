@@ -1,6 +1,6 @@
 https://youtu.be/C_0yEMHDm5w -cara start nginx 4 beginners
-
-
+#️⃣ keycap: # (pound) *️⃣ keycap: * (asterisk) 0️⃣ keycap: 0 1️⃣ keycap: 1 2️⃣ keycap: 2 3️⃣ keycap: 3 4️⃣ keycap: 4 5️⃣ keycap: 5 6️⃣ keycap: 6 7️⃣ keycap: 7 8️⃣ keycap: 8 9️⃣ keycap: 9 🔟 keycap: 10
+▧▨🎫🎫🎫pastenumberand🟢ctrlz🎫🎫🎫🎫
 https://www.geeksforgeeks.org/how-to-bundle-an-angular-app-for-production/ -ng build vs ng serve 
 🛡️🛠️🔑⭐
 ⬛npx pm2 start app.js
@@ -15,7 +15,9 @@ https://www.geeksforgeeks.org/how-to-bundle-an-angular-app-for-production/ -ng b
 
 ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 ==========================================================================================================================
-
+🌞🎫🎫🎫
+🔆🔅🔆1️⃣🔅🔆🔆
+🎫🎫🎫1️⃣🎫🎫🎫
 FE 🟢
 ⬛ng new hello-world
 ⬛cd hello-world
@@ -31,21 +33,31 @@ FE 🟢
 [4]Root Component - AppComponent
 -The app.component.ts is the actual Angular code that drives the functionality of the application.
 
+
+🎫🎫🎫2️⃣🎫🎫🎫
 FE 🟢
 #PROGRESS# 1/8 - 9/8 - 10/8/2022 belajar cara routing angular
-buat folder pages dekat C:\Users\PREDATOR\Desktop\booksys\hello-world\src\app\pages
-
+📁buat folder pages dekat C:\Users\PREDATOR\Desktop\booksys\hello-world\src\app\pages
+delete html code dekat [app.component.html] kasi tinggal <router-outlet></router-outlet> saja takut nanti confius bila dah home works! tapi tak keluar sedangkan dia kat bawah.
 ⬛cd C:\Users\PREDATOR\Desktop\booksys\hello-world\src\app\pages (nak senang run dekat cmd)
+🎫🎫🎫3️⃣🎫🎫🎫
 FE 🟢 
-🔑⬛ng generate component login (ada spec) || 🟦ng g c body --skip-tests true (xde spec)
+🔑⬛ng generate component login (ada spec) || 🟦ng g c body --skip-tests true (xde spec) note: pakai ada spec senang nanti nak ng test, skip bila perlu
 🔑⬛ng generate module login # nanti import LoginRoutingModule kat module.ts
-🔑⬛ng generate module login-routing 
-# pastu cut paste dekat folder pages login
-# module ni ada 2, (total 3 cmd kena run utk create page) biasa dengan routing # delete folder yg dah kosong
-pastu cek takut dia letak Component dalam declaration ngmodule dekat app.module.ts, kalau ada, buang. pelik bila buat MyprofileComponent dia ada, tapi yg lain sebelum ni xda, 
-❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥[UPDATE!! - ADA SEBAB NAK GUNA KAT TS BILA NAK APPLY NGIF NANTI]
-❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥[UPDATE LAGI!! - BUANG BALIK SEBAB BILA DECLARE DEKAT DIA PUNYA MODULE SENDIRI TU KENA DELETE BALIK DEKAT APP.MODULE- SEBAB formbuilder dengan reactiveform tu kena declare dekat module sendiri
-pastu masukkan path '' dekat routing.module [letak dekat atas ngmodule
+🔑⬛ng generate module login-routing  //ng g c folder-name/component-name //ng generate module folder-name/module-name //copy ni:- ng generate module home/home-routing
+
+🎫🎫🎫4️⃣🎫🎫🎫
+# pastu cut n paste [home-routing] dekat folder pages home # delete folder yg dah kosong
+# module ni ada 2, (total 3 cmd kena run utk create page) biasa dengan routing 
+🎫🎫🎫5️⃣🎫🎫🎫
+import LoginRoutingModule kat module.ts
+🎫🎫🎫6️⃣🎫🎫🎫❌KIV
+❌❌❌❌❌KEEP IN VIEW MASALAH NI ❌❌❌❌pastu cek takut dia letak Component dalam declaration ngmodule dekat app.module.ts, kalau ada, buang. pelik bila buat MyprofileComponent dia ada, tapi yg lain sebelum ni xda, 
+❌[UPDATE!! - ADA SEBAB NAK GUNA KAT TS BILA NAK APPLY NGIF NANTI]
+❌[UPDATE LAGI!! - ❤️‍🔥 - BUANG BALIK SEBAB BILA DECLARE DEKAT DIA PUNYA MODULE SENDIRI TU KENA DELETE BALIK DEKAT APP.MODULE- SEBAB formbuilder dengan reactiveform tu kena declare dekat module sendiri
+❌[UPDATE LAGI!! - ❤️‍🔥❌❤️‍🔥❌❤️‍🔥 - apasal eh? yg second statement tu mcm salah, kena letak BALIK sebab bila try dekat angular-double-resources xjadi, kena ada masa nak call data dalam ngfor
+🎫🎫🎫7️⃣🎫🎫🎫
+***copy bawah terus*** pastu masukkan path '' dekat routing.module [letak dekat atas ngmodule] 
 ====================================
 import { RouterModule, Routes } from '@angular/router';
 
@@ -66,7 +78,7 @@ lepastu.. haha.. ganti ngmodule sekali.. ni koding dia.. ganti trozz
   exports: [RouterModule]
 })
 ===================================
-copy bawah terus --dekat routing.module
+copy bawah terus --dekat routing.module (ganti ngmodule)
 ===================================
 import { RouterModule, Routes } from '@angular/router';
 
@@ -85,37 +97,140 @@ const routes: Routes = [
 })
 ===================================
 
+🎫🎫🎫8️⃣🎫🎫🎫
 FE 🟢
-⭐buat folder service🛡️
-ng generate service pokgad / ng generate service authentication /ng generate service anon-guard
-# pastu cut paste susun dalam folder service, yg spec tu buang
+📁buat folder services🛡️ dekat projectFE\src\app\services
+ng generate service pokgad / ng generate service authentication /ng generate service anon-guard / ng generate service authentication/authentication --skip-tests true
+
+⬛ng generate service authentication/authentication --skip-tests true
+🛡️authentication.services.ts
+➡️ untuk getUserbyId masa nak validateLogin login
+➡️ untuk check isAuthenticated()
+
+⬛ng generate service user-guard/user-guard --skip-tests true
+🛡️user-guard.services.ts
+➡️ untuk check session user nak bagi valid or not to access pages yang user punya
+
+⬛ng generate service user/user --skip-tests true
+🛡️user.services.ts
+➡️ untuk crud database user
+
+⬛ng generate service transaction/transaction --skip-tests true
+🛡️transaction.services.ts
+➡️ untuk crud wallet
+
+⬛ng generate service auth-guard/auth-guard --skip-tests true
+🛡️auth-guard.services.ts
+➡️ untuk check canActivate()
+➡️ dan dalam canActivate() nak check authenticationService.isAuthenticated
+
+# pastu cut paste susun dalam folder service, yg spec tu buang == ✅ - tak perlu sebab dah bagi command line yang memudahkan di atas (step8) 
 # ataupun klik folder > Open in integrated terminal > run cmd
 =================================================================
-//copy code ni dalam service
+🎫🎫🎫9️⃣🎫🎫🎫
+//copy code ni dalam service authentication.services.ts
+
 constructor(
     private router: Router
     ) { }
 
-  canActivate() : boolean{
+  authState = new BehaviorSubject(false);
+  canActivate() : boolean {
     if (sessionStorage.getItem('accountid')) {
-      //this.router.navigate(['']);
+      this.router.navigate(['']);
       //return false;
-      console.log("anon-guard.services.ts > false");return false;
+      console.log("a services.ts > false");return false;
     }
-    console.log("anon-guard.services.ts > true");
+    console.log("a services.ts > true");
+    return true;
+  }
+
+  isAuthenticated() {
+    return this.authState.value;
+  }
+
+=================================================================
+//copy code ni dalam service auth-guard.services.ts
+  constructor(
+    public authenticationService : AuthenticationService,
+    private router: Router
+    ) { }
+
+canActivate() : boolean{
+    // return this.authenticationService.isAuthenticated();
+    if (!this.authenticationService.isAuthenticated()) {
+      this.router.navigate(['login']);
+      return false;
+    }
     return true;
   }
 =================================================================
-//copy code ni dalam routes app.routing.module
+//copy code ni dalam service user-guard.services.ts
+  constructor(
+    public authenticationService : AuthenticationService,
+    private router: Router
+  ) { }
+
+
+  canActivate() : boolean{
+    
+    if (sessionStorage.getItem('role') !== 'user') {
+      this.router.navigate(['login']);
+      return false;
+    }
+    return true; 
+  }
+================================================================
+🎫🎫🎫🔟🎫🎫🎫
+//copy code ni dalam [routes] dekat "app.routing.module"
   {
-    path: "home",
+    path: "landingpage",
     canActivate: [AuthenticationService], 
     loadChildren: () =>
-      import("./pages/home/home.module").then((m) => m.HomeModule),
-  }
+    import("./pages/landingpage/landingpage.module").then((m) => m.LandingpageModule),
+  },
+  {
+    path: "login",
+    canActivate: [AuthenticationService], 
+    loadChildren: () =>
+    import("./pages/landingpage/landingpage.module").then((m) => m.LandingpageModule),
+  },
+  {
+    path: '',
+    component: MenuComponent, //⬅️ untuk menubar, backspace lepas copy 
+    canActivate: [AuthGuardService],
+    children: [
+      {
+        path: "home",
+        canActivate: [UserGuardService],
+        loadChildren: () =>
+          import("./pages/home/home.module").then((m) => m.HomeModule),
+      },
+      {
+        path: "dashboard",
+        canActivate: [UserGuardService],
+        loadChildren: () =>
+          import("./pages/dashboard/dashboard.module").then((m) => m.DashboardModule),
+      },
+	    {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full'
+      }
+    ]
+  },
+  { path: 'haha', redirectTo: 'landingpage' },
+  { path: '**', redirectTo: 'landingpage' }
 =================================================================
+
+🎫🎫🎫1️⃣1️⃣🎫🎫🎫
+copy code berkaitan utk auth guard, user,user-guard, authentication, etc... ✅ settle dekat step 9️⃣
+=================================================================
+✅ dah settle dekat step 5️⃣
 tambah HomeRoutingModule dekat home.module
 =================================================================
+
+
 
 FE 🟢DIULANGI SECARA NOTA
 #PROGRESS# 10/8/2022 + 24/8/2022(BulusFE) 🔄continue progress🔜❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥
@@ -134,6 +249,7 @@ STEP3🛠️tambah HomeRoutingModule dekat home.module
 FE 🟢
 #PROGRESS# 11/8/2022
 //cara nginx which is run FE in localhost instead of 4200 dev
+🎫🎫🎫1️⃣2️⃣🎫🎫🎫 (optional)
 ⬛ng build
 kalau 403, cek dist pastikan move file index dan seluruh rakyat jelatanya kat depan folder sepertimana dalam config nginx
 //cara guna node utk api gateway BE @ how to res api -10% 
@@ -148,27 +264,36 @@ open cmd
 
 ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 ==========================================================================================================================
+🎫🎫🎫1️⃣3️⃣🎫🎫🎫
 ************🔥🔥🔥JANGAN RUN DEKAT CMD FE🔥🔥🔥************************
-CREATE FOLDER BE 🔴
+📁CREATE FOLDER BE 🔴
 cd C:\Users\PREDATOR\Desktop\booksysBE
 ⬛npm init -y
 ⬛npm install express
-create index.js file. mungkin app.js sama jugak so nanti npm start index.js or npm start app.js
-copy code index.js utk testing
-⬛node . <- ni node titik ni start server node pastu boleh try test dekat postman atau browser ikut port contoh localhost:8080 
+❌create index.js file. mungkin app.js sama jugak so nanti npm start index.js or npm start app.js, copy code index.js utk testing
+✅copy terus ⬇️
+📁copy file index.js dekat BulusBE or angular-crud BE
+📁copy file app.js dgn folder API🧙‍♂️
+📁copy folder API🧙‍♂️
+📁copy folder config/database
+📁copy folder utils
+📁copy file sql utk buat database
+📁copy code .env
+⬛node . ⬅️ ni node titik ni start server node pastu boleh try test dekat postman atau browser ikut port contoh localhost:8080 
 Cannot GET /
 ⬛npx pm2 start index.js @ ⬛node . @ ⬛node app.js
 
 BE 🔴
 ⬛npm install dotenv --save
-copy code .env
+✅dah copy - 📁copy code .env
 # untuk require("dotenv").config(); dan configure database beserta port rakyatnya
 ⬛node app.js
 # server is up and running
 ⬛npm install express-rate-limit
-#pastu copy code // Express Rate Limit to prevent Brute Force Attack & DDoS
+✅dah copy - #pastu copy file app.js[▰🧙‍♂️▰] atau copy code // Express Rate Limit to prevent Brute Force Attack & DDoS
 ⬛node app.js
 
+⬛npm i cors
 BE 🔴
 ⬛npm install socket.io
 # apa tu? Socket.IO enables real-time bidirectional event-based communication.
@@ -185,16 +310,17 @@ BE 🔴
 BE 🔴
 ⬛npm install jsonwebtoken
 ⬛npm install mysql
-copy code app.js dgn folder API🧙‍♂️
-copy folder config/database
-copy folder utils
 
+
+🎫🎫🎫1️⃣4️⃣🎫🎫🎫 ➡️ buka postman, test post , test CRUD dekat postman, step 1️⃣5️⃣ nati kita apply call api BE dekat FE pulak
+BE 🔴
 #PROGRESS# 12-14/8/2022
 -cara callBack function
 -POST body postman
 -xyah pakai encryptor lagi, KIV decryptedIdx mungkin guna kat FE
 -FETCH DATABASE IS SUCCESSFULL!! 🔥🔥🔥
-
+🎫🎫🎫1️⃣5️⃣🎫🎫🎫
+step 1️⃣5️⃣ ni pakai logic , fahami koding, settle. BE to FE, IKUT JE CRUD 
 
 
 FE 🟢
@@ -330,6 +456,18 @@ pegi kat angular.json
 =================================================================================================
 
 
+
+==========================================================================================================================
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+▰▰▰						⭐⭐⭐	KALAU ADA SILLY ERROR	⭐⭐⭐
+
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+==========================================================================================================================
+
+🟥KALAU ada error dekat ➡️ [(ngModel)] 🟨 declarations: [LoginComponent],🟩login.module.ts
+🟥KALAU buat routing login pages dalam tak jadi, buang salah satu en route de lagho mwahaha
+🟥KALAU *ngFor xlepas, import BrowserModule dekat app module depan, xlepas jugak import component dalam tu, kalau nak declare sediri tak dapat cara lagi
 
 
 🔴 Red Circle
