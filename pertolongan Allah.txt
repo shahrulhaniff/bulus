@@ -6,6 +6,8 @@ https://www.geeksforgeeks.org/how-to-bundle-an-angular-app-for-production/ -ng b
 ⬛npx pm2 start app.js
 ⬛npm pm2 start prod app.js
 
+nak dist -- ng build
+
 🛠️START🛠️
 
 ==========================================================================================================================
@@ -51,13 +53,12 @@ FE 🟢
 # module ni ada 2, (total 3 cmd kena run utk create page) biasa dengan routing 
 🎫🎫🎫5️⃣🎫🎫🎫
 import LoginRoutingModule kat module.ts
-🎫🎫🎫6️⃣🎫🎫🎫❌KIV
+🎫🎫🎫6️⃣🎫🎫🎫❌KIV declare declarations: [DashboardComponent], dekat dashboard.module.ts
 ❌❌❌❌❌KEEP IN VIEW MASALAH NI ❌❌❌❌pastu cek takut dia letak Component dalam declaration ngmodule dekat app.module.ts, kalau ada, buang. pelik bila buat MyprofileComponent dia ada, tapi yg lain sebelum ni xda, 
 ❌[UPDATE!! - ADA SEBAB NAK GUNA KAT TS BILA NAK APPLY NGIF NANTI]
 ❌[UPDATE LAGI!! - ❤️‍🔥 - BUANG BALIK SEBAB BILA DECLARE DEKAT DIA PUNYA MODULE SENDIRI TU KENA DELETE BALIK DEKAT APP.MODULE- SEBAB formbuilder dengan reactiveform tu kena declare dekat module sendiri
 ❌[UPDATE LAGI!! - ❤️‍🔥❌❤️‍🔥❌❤️‍🔥 - apasal eh? yg second statement tu mcm salah, kena letak BALIK sebab bila try dekat angular-double-resources xjadi, kena ada masa nak call data dalam ngfor
-🎫🎫🎫7️⃣🎫🎫🎫
-***copy bawah terus*** pastu masukkan path '' dekat routing.module [letak dekat atas ngmodule] 
+🎫🎫🎫7️⃣🎫🎫🎫***copy bawah terus*** pastu masukkan path '' dekat routing.module [letak dekat atas ngmodule] 
 ====================================
 import { RouterModule, Routes } from '@angular/router';
 
@@ -402,7 +403,9 @@ Cannot find module 'moment'
 ⬛npm i moment
 
 
-
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
 PROGRESS TAK SEMANGAT LEPAS MUZAKKIR KATA NAK BAYAR 500 JE DENGAN SAKIT KEPALA NAK MATI BUAT KERJA
 DOWN TERUS BEBERAPA HARI 1/9-6/9 (SEMINGGU AMIK MASA NAK SEMANGAT BALIK)
 -SEMOGA DAPAT KERJA DI SELANGOR MCM KAWAN2 LAIN
@@ -420,6 +423,10 @@ Secure from:
 
 Simple but meet your requirements, good performance and more importantly, secured.🛡️
 Also, treat everyone's with respect🙂
+
+Im Shahrul Haniff graduated from The University Sultan Zainal Abidin Bachelor Degree in Computer Science would like to apply for Software Tester at your organisation and have a high competencies in giving strength to be in the organisation.
+
+Im Shahrul Haniff graduated from University Sultan Zainal Abidin Bachelor Degree in Computer Science would like to apply for Angular Dev at your organisation and have a high competencies in giving strength to be in the team. skilled FE Angular Node Js with nginx plus BE functional APIs for database.
 
 
 
@@ -614,6 +621,33 @@ constructor(
 
 up next tutorial:
 FileUploadUiModule
+
+
+==========================================================================================================================
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+▰▰▰							⭐⭐⭐	MENU LAYOUT	⭐⭐⭐
+
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+==========================================================================================================================
+
+
+📁copy folder layout/auth
+📁copy folder layout/body
+📁copy folder layout/menu
+➡️tambah declararion MenuComponent , AuthComponent, BodyComponent, dalam app.module.ts
+➡️tukar la component:   AuthComponent dekat path tu app-routing.module.ts
+
+
+🔃⚠️⚠️⚠️🔃next kerja, try tukar menu tu pakai menu-data🔃⚠️⚠️⚠️🔃
+
+
+
+
+
+
+
+
 
 
 
