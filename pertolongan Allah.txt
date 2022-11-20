@@ -52,7 +52,8 @@ FE 🟢
 # pastu cut n paste [home-routing] dekat folder pages home # delete folder yg dah kosong
 # module ni ada 2, (total 3 cmd kena run utk create page) biasa dengan routing 
 🎫🎫🎫5️⃣🎫🎫🎫
-import LoginRoutingModule kat module.ts
+import LoginRoutingModule kat login.module.ts 
+declarations LoginComponent kat login.module.ts
 🎫🎫🎫6️⃣🎫🎫🎫❌KIV declare declarations: [DashboardComponent], dekat dashboard.module.ts
 ❌❌❌❌❌KEEP IN VIEW MASALAH NI ❌❌❌❌pastu cek takut dia letak Component dalam declaration ngmodule dekat app.module.ts, kalau ada, buang. pelik bila buat MyprofileComponent dia ada, tapi yg lain sebelum ni xda, 
 ❌[UPDATE!! - ADA SEBAB NAK GUNA KAT TS BILA NAK APPLY NGIF NANTI]
@@ -79,7 +80,7 @@ lepastu.. haha.. ganti ngmodule sekali.. ni koding dia.. ganti trozz
   exports: [RouterModule]
 })
 ===================================
-copy bawah terus --dekat routing.module (ganti ngmodule)
+➡️copy bawah terus --dekat routing.module (ganti ngmodule)
 ===================================
 import { RouterModule, Routes } from '@angular/router';
 
